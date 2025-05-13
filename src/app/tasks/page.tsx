@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   const router = useRouter();
   const token = Cookies.get('token');
   const [loading, setLoading] = useState(true);
