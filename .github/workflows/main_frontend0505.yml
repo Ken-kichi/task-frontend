@@ -78,5 +78,5 @@ jobs:
           app-name: 'frontend0505'
           slot-name: 'Production'
           package: ./deploy
-        env:
-          NEXT_PUBLIC_API_URL: 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net'
+        env: # Add environment variables here
+          IS_STATIC_EXPORT: true
