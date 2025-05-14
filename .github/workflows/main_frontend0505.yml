@@ -79,4 +79,4 @@ jobs:
           slot-name: 'Production'
           package: ./deploy
         env:
-          NEXT_PUBLIC_API_URL:'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net'
+          NEXT_PUBLIC_API_URL: 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net'
