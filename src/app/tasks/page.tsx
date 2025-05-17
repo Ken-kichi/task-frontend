@@ -38,6 +38,7 @@ export default function Home() {
         } else if (error.response && error.response.status === 401) {
           router.push('/tasks');
         } else {
+          console.log(`2_${API_BASE_URL}/tasks`);
           router.push('/login');
         }
       })
