@@ -3,7 +3,6 @@
 import Layout from '@/components/Layout';
 import Spiner from '@/components/Spiner';
 import { TaskListProps } from '@/types';
-import { add_path_s } from '@/utils';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
@@ -24,11 +23,11 @@ export default function Home() {
     }
 
     axios
-      .get(add_path_s(`${API_BASE_URL}/tasks`), {
+      .get(`${API_BASE_URL}/tasks`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        timeout: 30000, 
+        timeout: 30000,
       })
       .then((res) => {
         setTasks(res.data);
