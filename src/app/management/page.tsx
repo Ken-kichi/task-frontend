@@ -29,7 +29,7 @@ export default function ManagementPage() {
     }
 
     axios
-      .get(`${API_BASE_URL}/users`, {
+      .get(`${API_BASE_URL}/users/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

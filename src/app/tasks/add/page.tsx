@@ -45,7 +45,7 @@ export default function AddTaskPage() {
         description: data.description,
         completed: false,
       };
-      await axios.post(`${API_BASE_URL}/tasks`, formData, {
+      await axios.post(`${API_BASE_URL}/tasks/`, formData, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,

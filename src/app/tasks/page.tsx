@@ -22,7 +22,7 @@ export default function Home() {
     }
 
     axios
-      .get(`${API_BASE_URL}/tasks`, {
+      .get(`${API_BASE_URL}/tasks/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
