@@ -32,6 +32,7 @@ export default function Home() {
         setTasks(res.data);
       })
       .catch((error) => {
+        console.error('Error:', error);
         if (error.response && error.response.status === 404) {
           setTasks([]);
         } else if (error.response && error.response.status === 401) {
