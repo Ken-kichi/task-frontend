@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  axios.defaults.adapter = ['xhr', 'fetch']; // ブラウザ環境に最適化
   const API_BASE_URL = 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net';
   const router = useRouter();
   const token = Cookies.get('token');

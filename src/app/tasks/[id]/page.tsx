@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function DetailTaskPage() {
-  axios.defaults.adapter = ['xhr', 'fetch']; // ブラウザ環境に最適化
   const API_BASE_URL = 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net';
   const router = useRouter();
   const params = useParams();
@@ -83,7 +82,7 @@ export default function DetailTaskPage() {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          timeout: 30000, 
+          timeout: 30000,
         });
         alert('Successfully deleted.');
         router.push('/tasks');
