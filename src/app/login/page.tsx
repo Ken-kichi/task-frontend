@@ -40,7 +40,7 @@ export default function LoginPage() {
           expires: expireDate,
           sameSite: 'strict',
         });
-        router.push('/tasks/');
+        router.push('/tasks');
       }
     } catch (error) {
       console.log(error);

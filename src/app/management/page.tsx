@@ -25,7 +25,7 @@ export default function ManagementPage() {
     }
 
     if (!loginUser.is_manager) {
-      router.push('/tasks/');
+      router.push('/tasks');
     }
 
     axios
@@ -42,7 +42,7 @@ export default function ManagementPage() {
         if (error.response && error.response.status === 404) {
           setUsers([]);
         } else if (error.response && error.response.status === 401) {
-          router.push('/tasks/');
+          router.push('/tasks');
         } else {
           router.push('/login');
         }

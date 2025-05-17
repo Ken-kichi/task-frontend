@@ -53,7 +53,7 @@ export default function AddTaskPage() {
         timeout: 30000,
       });
       reset();
-      router.push('/tasks/');
+      router.push('/tasks');
     } catch (error) {
       if (axios.isAxiosError(error) && error.response?.status === 401) {
         Cookies.remove('token');
