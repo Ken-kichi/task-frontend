@@ -43,7 +43,8 @@ export default function LoginPage() {
         });
         router.push('/tasks');
       }
-    } catch {
+    } catch (error) {
+      console.log(error);
       setLoginError('Login failed. Incorrect user name or password.');
     }
   };
