@@ -26,7 +26,6 @@ export default function Home() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       })
       .then((res) => {
         setTasks(res.data);

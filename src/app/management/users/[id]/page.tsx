@@ -39,7 +39,6 @@ export default function DetailUserPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       })
       .then((res) => {
         setUser(res.data);
@@ -72,7 +71,6 @@ export default function DetailUserPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       });
       alert('Successfully updated!');
       router.push('/management');
@@ -90,7 +88,6 @@ export default function DetailUserPage() {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          withCredentials: true,
         });
         alert('Successfully deleted.');
         router.push('/management/users');

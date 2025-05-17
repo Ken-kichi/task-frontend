@@ -33,7 +33,6 @@ export default function ManagementPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       })
       .then((res) => {
         setUsers(res.data);

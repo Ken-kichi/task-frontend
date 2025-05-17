@@ -27,7 +27,6 @@ export default function LoginPage() {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        withCredentials: true,
       });
 
       if (response.status === 200) {

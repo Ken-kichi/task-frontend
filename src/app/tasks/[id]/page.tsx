@@ -33,7 +33,6 @@ export default function DetailTaskPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       })
       .then((res) => {
         setTask(res.data);
@@ -63,7 +62,6 @@ export default function DetailTaskPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       });
       alert('Successfully updated!');
       router.push('/tasks');
@@ -82,7 +80,6 @@ export default function DetailTaskPage() {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          withCredentials: true,
         });
         alert('Successfully deleted.');
         router.push('/tasks');

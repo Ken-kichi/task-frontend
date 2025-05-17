@@ -50,7 +50,6 @@ export default function AddTaskPage() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
-        withCredentials: true,
       });
       reset();
       router.push('/tasks');
