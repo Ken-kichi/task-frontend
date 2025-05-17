@@ -78,5 +78,3 @@ jobs:
           app-name: 'frontend0505'
           slot-name: 'Production'
           package: ./deploy
-        env: # Add environment variables here
-          IS_STATIC_EXPORT: true
