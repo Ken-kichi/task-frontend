@@ -21,6 +21,8 @@ export default function Home() {
       return;
     }
 
+    console.log(`${API_BASE_URL}/tasks`);
+
     axios
       .get(`${API_BASE_URL}/tasks`, {
         headers: {
