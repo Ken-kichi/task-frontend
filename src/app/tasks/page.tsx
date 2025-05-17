@@ -3,6 +3,7 @@
 import Layout from '@/components/Layout';
 import Spiner from '@/components/Spiner';
 import { TaskListProps } from '@/types';
+import { add_path_s } from '@/utils';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
@@ -21,10 +22,8 @@ export default function Home() {
       return;
     }
 
-    console.log(`${API_BASE_URL}/tasks`);
-
     axios
-      .get(`${API_BASE_URL}/tasks`, {
+      .get(add_path_s(`${API_BASE_URL}/tasks`), {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -38,7 +37,6 @@ export default function Home() {
         } else if (error.response && error.response.status === 401) {
           router.push('/tasks');
         } else {
-          console.log(`2_${API_BASE_URL}/tasks`);
           router.push('/login');
         }
       })
