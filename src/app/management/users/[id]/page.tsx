@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function DetailUserPage() {
+  axios.defaults.adapter = ['xhr', 'fetch']; // ブラウザ環境に最適化
   const API_BASE_URL = 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net';
   const router = useRouter();
   const params = useParams();
@@ -39,6 +40,7 @@ export default function DetailUserPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        timeout: 30000,
       })
       .then((res) => {
         setUser(res.data);
@@ -71,6 +73,7 @@ export default function DetailUserPage() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        timeout: 30000,
       });
       alert('Successfully updated!');
       router.push('/management');
@@ -88,6 +91,7 @@ export default function DetailUserPage() {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          timeout: 30000, 
         });
         alert('Successfully deleted.');
         router.push('/management/users');

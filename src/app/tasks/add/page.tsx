@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function AddTaskPage() {
+  axios.defaults.adapter = ['xhr', 'fetch']; // ブラウザ環境に最適化
   const API_BASE_URL = 'https://fastapibackend-h5a3fybtcwahdag9.japanwest-01.azurewebsites.net';
   const router = useRouter();
   const token = Cookies.get('token');
@@ -50,6 +51,7 @@ export default function AddTaskPage() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
+        timeout: 30000,
       });
       reset();
       router.push('/tasks');
