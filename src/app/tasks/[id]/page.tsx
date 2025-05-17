@@ -46,7 +46,7 @@ export default function DetailTaskPage() {
         if (error.response && error.response.status === 404) {
           setTask(undefined);
         } else if (error.response && error.response.status === 401) {
-          router.push('/tasks');
+          router.push('/tasks/');
         } else {
           router.push('/login');
         }
@@ -66,7 +66,7 @@ export default function DetailTaskPage() {
         timeout: 30000,
       });
       alert('Successfully updated!');
-      router.push('/tasks');
+      router.push('/tasks/');
     } catch (error) {
       console.error('Update failed.', error);
     }
@@ -85,7 +85,7 @@ export default function DetailTaskPage() {
           timeout: 30000,
         });
         alert('Successfully deleted.');
-        router.push('/tasks');
+        router.push('/tasks/');
       } catch (error) {
         console.error('Deletion failed.', error);
       }

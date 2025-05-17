@@ -36,7 +36,7 @@ export default function Home() {
         if (error.response && error.response.status === 404) {
           setTasks([]);
         } else if (error.response && error.response.status === 401) {
-          router.push('/tasks');
+          router.push('/tasks/');
         } else {
           router.push('/login');
         }

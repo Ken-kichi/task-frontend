@@ -29,7 +29,7 @@ export default function DetailUserPage() {
     }
 
     if (!loginUser.is_manager) {
-      router.push('/tasks');
+      router.push('/tasks/');
     }
 
     const { id } = params;
@@ -54,7 +54,7 @@ export default function DetailUserPage() {
         if (error.response && error.response.status === 404) {
           setUser(undefined);
         } else if (error.response && error.response.status === 401) {
-          router.push('/tasks');
+          router.push('/tasks/');
         } else {
           router.push('/login');
         }
