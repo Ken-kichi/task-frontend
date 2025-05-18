@@ -55,7 +55,7 @@ export default function AddUserPage() {
     };
 
     try {
-      await axios.post(`${API_BASE_URL}/users`, userData, {
+      await axios.post(`${API_BASE_URL}/users/`, userData, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
