@@ -63,7 +63,7 @@ export default function AddUserPage() {
         timeout: 30000,
       });
       reset();
-      router.push('/management/users');
+      router.push('/management');
     } catch (error) {
       if (axios.isAxiosError(error) && error.response?.status === 401) {
         Cookies.remove('token');
@@ -79,7 +79,7 @@ export default function AddUserPage() {
     <Layout>
       <div className="flex justify-end items-center mb-4 mr-6">
         <button
-          onClick={() => router.push('/users')}
+          onClick={() => router.push('/management')}
           className="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700"
         >
           User List

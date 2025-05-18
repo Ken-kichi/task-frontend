@@ -93,7 +93,7 @@ export default function DetailUserPage() {
           timeout: 30000,
         });
         alert('Successfully deleted.');
-        router.push('/management/users');
+        router.push('/management');
       } catch (error) {
         console.log('Deletion failed.', error);
       }
